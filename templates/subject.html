@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <style>
+    body {
+      background: linear-gradient(to bottom right, rgb(38, 38, 245), rgb(101, 101, 238), rgb(38, 169, 245), rgb(38, 221, 245), rgb(103, 236, 253), rgb(146, 238, 250), rgb(199, 244, 250)) fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 0%;
+      height: 100%;
+      background-image: url('./static/subject.jpg');
+
+    }
+
+    
+    h1 {
+      color: blue;
+    }
+
+    p {
+      color: red;
+    }
+
+    .container {
+      margin: 10 10 0 0px;
+      text-align: center;
+    }
+
+    .subject_form {
+      margin: auto;
+      text-align: left;
+    }
+
+
+    div {
+      text-align: center;
+      border-radius: 5px;
+      background-color: #e2d7d7;
+      padding: 30px;
+      width: 60%;
+      margin: auto;
+      margin-top: 8%;
+
+    }
+
+    .subject_form input[type=text]{
+      border-radius: 3px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border: 1px solid #FFC2DC;
+      outline: none;
+      color: #F072A9;
+      padding: 5px 8px 5px 8px;
+      box-shadow: inset 1px 1px 4px #FFD5E7;
+      -moz-box-shadow: inset 1px 1px 4px #FFD5E7;
+      -webkit-box-shadow: inset 1px 1px 4px #FFD5E7;
+      background: #FFEFF6;
+      width: 50%;
+    }
+
+    .subject_form input[type=submit] {
+    width: fit-content;
+    background-color: #35c2c2;
+    color: rgb(29, 28, 28);
+    padding: 14px 20px;
+    margin: auto;
+    margin-top: 2%;
+    
+    border-radius: 4px;
+    cursor: pointer;
+    border-color: blue;
+    
+    border-width: 1px;
+    
+  }
+  .subject_form input[type=submit]:hover {
+    background-color: #0a4bac;
+    
+  }
+  </style>
+  <title>Subject sentiment analysis</title>
+</head>
+
+<body>
+  <div>
+  <h2 class="h2" style="text-align:center; margin-top:3%;margin-bottom:3%; padding:10px;">Welcome to the sentiment
+    analysis page for a subject</h2>
+    <hr>
+    <form action="/subject" method="POST" class="subject_form">
+
+
+      <label for="subject"><h5>Enter the name/title of subject :</h5> </b></label>
+      <input type="text" name="subject@name" id='subject@name'>
+
+      <br>
+      <br>
+      <label><h5>Select the chart type for Sentiment visualization: </h5> </label>
+      
+             <input type="radio" id="bar" name="p_type" value="Bar Graph">
+             <label><h6>Bar Graph</h6></label>
+             <input type="radio" id="pie" name="p_type" value="Pie Chart">
+             <label><h6>Pie Chart</h6></label>
+            <br/>
+      <br>
+      <input type="submit" name="submit" id='submit' value="Show Results">
+
+    </form>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
